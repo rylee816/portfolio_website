@@ -4,19 +4,27 @@ const leftLine = document.querySelector(".left-line");
 const bottomLine = document.querySelector(".bottom-line");
 
 window.addEventListener("load", () => {
-topLine.style.transform = "translateY(0%)";
-rightLine.style.transform = "translateY(0%)";
-leftLine.style.transform = "translateY(0%)";
-leftLine.style.transform = "translateX(0%)";
-bottomLine.style.transform = "translateY(0%)";
+    clear();
+
 setTimeout(function(){
-    clear()
-}, 2000)
+    topLine.style.opacity = 1;
+    rightLine.style.opacity = 1;
+    leftLine.style.opacity = 1;
+    bottomLine.style.opacity = 1;
+
+    topLine.style.transform = "translateY(0%)";
+    rightLine.style.transform = "translateY(0%)";
+    leftLine.style.transform = "translateY(0%)";
+    leftLine.style.transform = "translateX(0%)";
+    bottomLine.style.transform = "translateY(0%)";
+}, 2900)
 })
 
 function clear(){
-    topLine.style.display = "none"
-    rightLine.style.display = "none"
-    leftLine.style.display = "none"
-    bottomLine.style.display = "none"
+    topLine.style.opacity = 0;
+    rightLine.style.opacity = 0;
+    leftLine.style.opacity = 0;
+    bottomLine.style.opacity = 0;
 }
+
+
