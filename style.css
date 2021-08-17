@@ -568,7 +568,6 @@ justify-self: center;
   grid-row: 1;
 }
 
-
   /* Small screens */
   @media only screen and (max-width: 700px) {
     .navbar {
