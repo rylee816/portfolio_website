@@ -8,6 +8,7 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 600ms;
+      scroll-behavior: smooth;
   }
   
 *, *::after, *::before {
@@ -434,6 +435,16 @@
   /* background-color: rgba(116, 24, 103, 0.39); */
   display: flex;
   flex-direction: column;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#projects h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#projects p {
+  line-height: 1.5rem;
 }
 
 .projects-glow-container{
@@ -454,10 +465,18 @@ align-self: center;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.568);
   display: flex;
   justify-self: center;
+  transition: all .5s ease;
 }
 
 #projects img {
   width: 100%;
+}
+
+#projects .image:hover {
+  /* opacity: .8; */
+  filter: invert();
+  transform: translateY(-10px);
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.568);
 }
 
 .project {
@@ -511,7 +530,7 @@ justify-self: center;
 }
 
 .react, .javascript {
-  background: rgb(252, 227, 6);
+  background: rgb(252, 186, 6);
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -638,8 +657,6 @@ justify-self: center;
 
   /* Medium screens */
   @media only screen and (max-width: 1100px){
-    #projects {
-    }
     .project {
       /* outline: 1px solid red; */
       flex-direction: column;
