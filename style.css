@@ -536,6 +536,11 @@ justify-self: center;
   border-radius: 5px;
 }
 
+span.beats{
+  text-decoration: underline;
+  color: red;
+  line-height: 2rem;
+}
 
 
 .project-1-text{
