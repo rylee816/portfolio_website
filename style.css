@@ -605,7 +605,7 @@ justify-self: center;
     }
 
     .project {
-      margin: -50px;
+      margin-top: -200px;
       padding: 0;
       display: grid;
       grid-template-rows: 1fr 1fr;
