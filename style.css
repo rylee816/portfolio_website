@@ -462,7 +462,7 @@ align-self: center;
 }
 
 #projects .image {
-  width: 500px;
+  max-width: 500px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.568);
   display: flex;
   justify-self: center;
@@ -500,7 +500,7 @@ align-self: center;
 .project-text{
 /* background: white; */
 width: 100%;
-min-width: 400px;
+/* min-width: 400px; */
 padding: 0 50px;
 justify-self: center;
 }
@@ -617,7 +617,7 @@ justify-self: center;
 
     .project-text-header {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     }
 
     .project-text, .project-text-header {
@@ -644,7 +644,7 @@ justify-self: center;
     }
   
     .technologies{
-      margin: auto;
+      /* margin: auto; */
     }
 
     .navbar-nav {
@@ -710,19 +710,21 @@ justify-self: center;
   @media only screen and (max-width: 1100px){
     .project {
       /* outline: 1px solid red; */
-      /* flex-direction: column; */
       width: 100vw;
       justify-content: center;
-      /* margin-bottom: 100px; */
       position: relative;
+    }
+
+    .project-text-header {
+      margin-bottom: 20px;
     }
 
     .project-text {
       grid-row: 1 / 2;
-      padding: 0;
+      padding: 0 20px;
       margin-bottom: 150px;
       justify-self: center;
-      width: 400px;
+      max-width: 350px;
       grid-column: 1 / -1;
     }
 
@@ -737,7 +739,7 @@ justify-self: center;
       justify-self: center;
       grid-column: 1 / -1;
       grid-row: 2 / 3;
-      width: 400px;
+      width: 360px;
     }
 
     #projects a {
