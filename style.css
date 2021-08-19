@@ -611,6 +611,10 @@ justify-self: center;
       grid-template-rows: 1fr 1fr;
     }
 
+    .project-1 {
+      margin-top: 0;
+    }
+
     #projects a {
       margin-top: 0;
     }
