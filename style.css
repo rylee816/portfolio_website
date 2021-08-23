@@ -429,7 +429,7 @@
 
 /* Projects Section */
 #projects {
-  height: 100vh;
+  min-height: 100vh;
   /* width: 100vw; */
   /* position: absolute; */
   /* background-color: rgba(116, 24, 103, 0.39); */
@@ -593,6 +593,127 @@ span.beats{
   grid-row: 1;
 }
 
+
+
+/* About Section */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  position: relative;
+  padding: 0 1rem 0 6rem;
+  gap: 10px;
+}
+
+.about-header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 10px;
+}
+
+/* .about-title {
+  text-align: center;
+  padding: 50px;
+  color: white;
+  font-size: 2rem;
+} */
+
+.logo-container {
+ background-color: var(--bg-secondary);
+ /* grid-column: 1 / 3; */
+ grid-column: 1 / 2;
+ grid-row: 1 / 2;
+ min-height: 300px;
+ text-align: center;
+ padding-top: 60px;
+}
+
+.logo-container img {
+  height: 200px;
+}
+
+.about-image {
+  /* grid-column: 3 / -1; */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  /* background-color: var(--bg-primary); */
+  max-width: 100%; 
+  height: 100%;
+  position: relative;
+  /* height: 300px; */
+}
+
+.about-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.274);
+}
+
+.about-image img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.box-1 {
+  background-color: #847d87;
+  grid-column: 1 / 4;
+  font-size: 2rem;
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-2 {
+  grid-column: 4 / 7;
+  height: auto;
+  position: relative;
+  /* min-width: 300px; */
+  /* background-image: url("/images/randy.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+}
+
+.box-2 img {
+  /* position: absolute; */
+  object-fit: cover;
+  /* height: 300px; */
+  height: 100%;
+  width: 100%;
+}
+
+.box-3 {
+  background-color: #7f7a818a;
+  /* background-color: #7f7a8141; */
+  /* background-color: rgba(25, 0, 255, 0.219); */
+  grid-column: 7 / -1;
+  grid-row: 2 / 4;
+}
+
+.box-4 {
+  background-color: #313131;
+  background-color: var(--bg-secondary);
+  grid-column: 1 / 7;
+}
+
+.contact {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  background-color: rgb(138, 198, 233);
+}
+
   /* Small screens */
   @media only screen and (max-width: 700px) {
     body, html, * {
@@ -713,7 +834,56 @@ span.beats{
     .top-line, .bottom-line, .right-line, .left-line {
       display: none;
     }
+
+    .about {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      max-width: 100vw;
+      margin-top: -200px;
+      gap: 5px;
+    }
+
+    .about-header {
+      /* grid-row: 1 / 2; */
+    }
+
+    .box-1 {
+      display: none;
+      /* grid-column: 1 / -1; */
+    }
+
+    .box-2 {
+      /* display: flex;
+      grid-column: 1 / -1;
+      position: relative;
+      justify-items: center; */
+      display: none;
+    }
+
+    .about .box-2 img {
+     display: none;
+    }
+
+    .box-3 {
+      grid-row: 2 / 3;
+      /* grid-column: 1 / -1; */
+      /* background-color: red; */
+      margin-top: -300px;
+    }
+
+    .box-4 {
+      display: none;
+    }
+
+    .contact {
+      /* grid-row: 3 / 4; */
+      /* display: none; */
+    }
   }
+
+ 
 
   /* Medium screens */
   @media only screen and (max-width: 1100px){
@@ -755,6 +925,37 @@ span.beats{
       position: relative;
       justify-content: center;
       width: 100%;
+    }
+
+    .about-image {
+      display: none;
+    }
+
+    .logo-container {
+      grid-column: 1 / -1;
+      height: 300px;
+      margin-top: auto;
+    }
+
+    .box-1 {
+      grid-column: 1 / 6;
+    }
+
+    .box-2 {
+      grid-column: 6 / -1;
+    }
+
+    .box-3 {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+    }
+
+    .box-4 {
+      display: none;
+    }
+
+    .contact {
+      grid-row: 4 / 5;
     }
 
     /* #projects img {
