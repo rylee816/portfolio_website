@@ -697,6 +697,9 @@ span.beats{
 .box-3 {
   background-color: #7f7a818a;
   color: var(--bg-primary);
+  color: rgba(255, 255, 255, 0.788);
+  background-color: var(--bg-primary);
+
   grid-column: 7 / -1;
   grid-row: 2 / 4;
   padding: 4rem 6rem;
@@ -708,8 +711,9 @@ span.beats{
 
 .text-body {
   line-height: 1.7rem;
-  font-weight: 600;
+  font-weight: 400;
   max-width: 500px;
+  letter-spacing: .1rem;
 }
 
 .box-3 h1 {
