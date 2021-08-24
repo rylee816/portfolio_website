@@ -485,12 +485,8 @@ display: grid;
 gap: 50px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
-/* height: 500px; */
-/* justify-content: space-around; */
 padding: 0 300px;
 align-self: center;
-/* background: grey; */
-/* outline: 2px solid blue; */
 }
 
 .project-text-header {
@@ -600,7 +596,7 @@ span.beats{
 .about {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 350px repeat(2, 1fr) 350px;
   position: relative;
   padding: 0 1rem 0 6rem;
   gap: 10px;
@@ -677,7 +673,7 @@ span.beats{
 
 .box-2 {
   grid-column: 4 / 7;
-  height: auto;
+  /* height: auto; */
   position: relative;
   /* min-width: 300px; */
   /* background-image: url("/images/randy.jpeg");
@@ -689,7 +685,6 @@ span.beats{
 .box-2 img {
   /* position: absolute; */
   object-fit: cover;
-  /* height: 300px; */
   height: 100%;
   width: 100%;
 }
@@ -731,16 +726,81 @@ span.beats{
 }
 
 .box-4 {
+  display: flex;
   background-color: #313131;
   background-color: var(--bg-secondary);
   grid-column: 1 / 7;
+  align-content: center;
+  justify-content: center;
+}
+
+.box-4 img {
+  max-width: 500px;
+  object-fit: contain;
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   grid-column: 1 / -1;
   grid-row: 4 / 5;
-  background-color: rgb(138, 198, 233);
+  padding: .5rem;
+  background-color: var(--text-primary);
 }
+
+.contact-button-container {
+  display: flex;
+  min-width: 300px;
+  justify-content: space-around;
+}
+
+.contact-button-container i {
+  color: black;
+}
+
+.contact-button-container i:hover{
+  color: var(--color-accent);
+}
+
+.contact-text {
+  max-width: 80%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact-text a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.521);
+  transition: color .3s linear;
+  position: relative;
+}
+
+.contact-text a:hover {
+  color: var(--color-accent);
+}
+
+.contact-text a::after{
+  content: " ";
+  background: var(--color-accent);
+  height: 3px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+  transform: scaleX(0)
+}
+
+.contact-text a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 
   /* Small screens */
   @media only screen and (max-width: 700px) {
@@ -801,9 +861,6 @@ span.beats{
       display: none;
     }
   
-    .technologies{
-      /* margin: auto; */
-    }
 
     .navbar-nav {
       flex-direction: row;
@@ -837,9 +894,6 @@ span.beats{
       display: none;
     }
 
-    .image {
-      /* text-align: center; */
-    }
 
     .button-container {
       /* background-color: red; */
@@ -873,10 +927,6 @@ span.beats{
       gap: 5px;
     }
 
-    .about-header {
-      /* grid-row: 1 / 2; */
-    }
-
 
     .box-1 {
       display: none;
@@ -893,14 +943,14 @@ span.beats{
 
     .box-3 {
       grid-row: 2 / 3;
-      margin-top: -300px;
+      margin-top: -360px;
       position: relative;
       padding: 0;
     }
 
     .text-body {
       justify-self: center;
-      margin-top: auto;
+      /* margin-top: auto; */
       padding: 2rem 1rem;
     }
 
@@ -909,8 +959,11 @@ span.beats{
     }
 
     .contact {
-      /* grid-row: 3 / 4; */
-      /* display: none; */
+      padding-bottom: 5rem;
+    }
+
+    .contact-text {
+      width: 100%;
     }
   }
 
