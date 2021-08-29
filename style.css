@@ -30,6 +30,7 @@
   body::-webkit-scrollbar-thumb {
     background: #6649b8;
   }
+
   
   main {
     display: grid;
@@ -611,12 +612,6 @@ span.beats{
   gap: 10px;
 }
 
-/* .about-title {
-  text-align: center;
-  padding: 50px;
-  color: white;
-  font-size: 2rem;
-} */
 
 .logo-container {
  background-color: var(--bg-secondary);
@@ -633,14 +628,11 @@ span.beats{
 }
 
 .about-image {
-  /* grid-column: 3 / -1; */
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  /* background-color: var(--bg-primary); */
   max-width: 100%; 
   height: 100%;
   position: relative;
-  /* height: 300px; */
 }
 
 .about-image::after {
@@ -673,17 +665,10 @@ span.beats{
 
 .box-2 {
   grid-column: 4 / 7;
-  /* height: auto; */
   position: relative;
-  /* min-width: 300px; */
-  /* background-image: url("/images/randy.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain; */
 }
 
 .box-2 img {
-  /* position: absolute; */
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -792,7 +777,7 @@ span.beats{
   bottom: 0;
   left: 0;
   transform-origin: right;
-  transition: transform 250ms ease-in;
+  transition: transform 300ms ease-in;
   transform: scaleX(0)
 }
 

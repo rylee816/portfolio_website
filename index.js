@@ -3,8 +3,7 @@ const rightLine = document.querySelector(".right-line");
 const leftLine = document.querySelector(".left-line");
 const bottomLine = document.querySelector(".bottom-line");
 
-window.addEventListener("load", () => {
-    clear();
+clear();
 
 setTimeout(function(){
     topLine.style.opacity = 1;
@@ -18,7 +17,6 @@ setTimeout(function(){
     leftLine.style.transform = "translateX(0%)";
     bottomLine.style.transform = "translateY(0%)";
 }, 2900)
-})
 
 function clear(){
     topLine.style.opacity = 0;
@@ -28,3 +26,5 @@ function clear(){
 }
 
 
+
+// window.addEventListener("load", () => {})
