@@ -533,6 +533,12 @@ justify-self: center;
   border-radius: 5px;
 }
 
+.graphql {
+  background: rgb(201, 55, 201);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 span.beats{
   text-decoration: underline;
   color: red;
@@ -977,9 +983,7 @@ span.beats{
     }
 
 
-    .technologies {
-      /* margin: 0 auto 50px ; */
-    }
+    
 
     #projects .image {
       margin-top: -150px; 
