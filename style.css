@@ -977,6 +977,10 @@ span.beats{
     .contact-text {
       width: 100%;
     }
+
+    .contact-text a {
+      font-size: 1.5rem;
+    }
   }
 
  
@@ -1090,6 +1094,8 @@ span.beats{
     }
 
   }
+
+
 
   
   
