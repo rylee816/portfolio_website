@@ -437,9 +437,6 @@
 /* Projects Section */
 #projects {
   min-height: 100vh;
-  /* width: 100vw; */
-  /* position: absolute; */
-  /* background-color: rgba(116, 24, 103, 0.39); */
   display: flex;
   flex-direction: column;
   color: rgba(0, 0, 0, 0.7);
@@ -474,6 +471,8 @@ align-self: center;
   display: flex;
   justify-self: center;
   transition: all .5s ease;
+  align-self: center;
+  flex-direction: column;
 }
 
 #projects img {
@@ -487,6 +486,15 @@ align-self: center;
   box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.568);
 }
 
+.project-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 150px;
+}
+
+
 .project {
 display: grid;
 gap: 50px;
@@ -497,7 +505,6 @@ align-self: center;
 }
 
 .project-text-header {
-  margin: 0 0 20px;
   max-width: 100%;
 }
 
@@ -507,6 +514,19 @@ width: 100%;
 /* min-width: 400px; */
 padding: 0 50px;
 justify-self: center;
+}
+
+#projects .source {
+  display: inline-block;
+  width: 200px;
+  margin:  10px 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.source:hover{
+  color: var(--color-accent);
 }
 
 .technologies {
@@ -781,7 +801,7 @@ span.beats{
   color: var(--color-accent);
 }
 
-.contact-text a::after{
+.contact-text a::after {
   content: " ";
   background: var(--color-accent);
   height: 3px;
@@ -801,17 +821,14 @@ span.beats{
 
 
   /* Small screens */
+
   @media only screen and (max-width: 700px) {
-    body, html, * {
-      margin: 0;
-      padding: 0;
-      /* outline: 1px solid black; */
-    }
+
 
     .project a {
      margin-top: -250px;
      justify-self: center;
-     width: 100%;
+     /* width: 100%; */
      grid-row: 2 / 3;
      grid-column: 1 / -1;
     }
@@ -992,6 +1009,7 @@ span.beats{
       width: 100vw;
       justify-content: center;
       position: relative;
+      max-height: 100%;
     }
 
     .project-text-header {
@@ -1005,10 +1023,7 @@ span.beats{
       justify-self: center;
       max-width: 500px;
       grid-column: 1 / -1;
-    }
-
-
-    
+    }    
 
     #projects .image {
       margin-top: -150px; 
